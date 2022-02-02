@@ -8,8 +8,8 @@ import org.bukkit.ChatColor;
 public final class Constants {
 
     public static class General {
-        public static final String PLUGIN_NAME = "MiniatureMobs";
-        public static final String COMMAND_SHORTCUT = "MiniatureMobs";
+        public static final String PLUGIN_NAME = "UCMiniatures";
+        public static final String COMMAND_SHORTCUT = "UCMiniatures";
     }
 
     public static class Command {

@@ -25,7 +25,7 @@ import java.util.Set;
 public class ConfigurationManager {
 
     @Getter
-    private final List<MiniatureMobConfiguration> configurationMobs = new ArrayList<MiniatureMobConfiguration>();
+    private final List<UCMiniaturesConfiguration> configurationMobs = new ArrayList<UCMiniaturesConfiguration>();
 
     /**
      * Get the configuration file of the miniature mobs.
@@ -43,8 +43,8 @@ public class ConfigurationManager {
      * @param nameID The name ID of the mob, from the configuration section.
      * @return The miniature mob configuration object.
      */
-    public MiniatureMobConfiguration getMobConfigurationByID(String nameID) {
-        for (MiniatureMobConfiguration mb : configurationMobs) {
+    public UCMiniaturesConfiguration getMobConfigurationByID(String nameID) {
+        for (UCMiniaturesConfiguration mb : configurationMobs) {
             if (mb.getNameID().equals(nameID)) {
                 return mb;
             }
@@ -85,14 +85,14 @@ public class ConfigurationManager {
      * @param nameID The string ID of the miniature mob from the configuration file.
      * @return The configuration object.
      */
-    private MiniatureMobConfiguration createMobConfiguration(String nameID) {
+    private UCMiniaturesConfiguration createMobConfiguration(String nameID) {
         FileConfiguration file = getConfigFile();
 
         if (!file.contains(nameID)) {
             return null;
         }
 
-        MiniatureMobConfiguration mobConfiguration = new MiniatureMobConfiguration(nameID);
+        UCMiniaturesConfiguration mobConfiguration = new UCMiniaturesConfiguration(nameID);
 
         String dir = nameID + ".";
 

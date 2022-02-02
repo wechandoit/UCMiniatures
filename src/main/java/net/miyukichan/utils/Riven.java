@@ -1,5 +1,6 @@
 package net.miyukichan.utils;
 
+// Taken from https://jvm-gaming.org/t/extremely-fast-sine-cosine/55153
 public final class Riven {
 
     private static final int SIN_BITS, SIN_MASK, SIN_COUNT;

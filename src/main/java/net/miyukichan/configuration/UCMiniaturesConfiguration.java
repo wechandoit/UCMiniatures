@@ -11,7 +11,7 @@ import java.util.List;
  * A miniature mob configuration. Holding information about mob configuration.
  * Used to load mobs from the configuration files.
  */
-public class MiniatureMobConfiguration {
+public class UCMiniaturesConfiguration {
 
     public String getNameID() {
         return nameID;
@@ -83,7 +83,7 @@ public class MiniatureMobConfiguration {
      *
      * @param nameID The string ID of the mob, the section name of each miniature mob.
      */
-    MiniatureMobConfiguration(String nameID) {
+    UCMiniaturesConfiguration(String nameID) {
         this.nameID = nameID;
         this.parts = new ArrayList<Part>();
     }

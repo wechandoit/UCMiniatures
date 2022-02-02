@@ -1,3 +1,4 @@
+net\miyukichan\configuration\UCMiniaturesConfiguration.class
 net\miyukichan\utils\Riven.class
 net\miyukichan\utils\ChatUtils.class
 net\miyukichan\consts\Constants$Command.class
@@ -18,7 +19,6 @@ net\miyukichan\configuration\ConfigurationManager$1.class
 net\miyukichan\commands\MainCommand.class
 net\miyukichan\consts\Constants.class
 net\miyukichan\mob\MobMachine$1.class
-net\miyukichan\configuration\MiniatureMobConfiguration.class
 net\miyukichan\entityai\ZombieMobBaseEntity.class
 net\miyukichan\consts\Constants$General.class
 net\miyukichan\mob\MobsManager.class

@@ -3,7 +3,7 @@ package net.miyukichan.mob;
 import it.unimi.dsi.fastutil.objects.ObjectBigArrayBigList;
 import lombok.Getter;
 import net.miyukichan.Main;
-import net.miyukichan.configuration.MiniatureMobConfiguration;
+import net.miyukichan.configuration.UCMiniaturesConfiguration;
 import net.miyukichan.entityai.MobsBase;
 import net.miyukichan.entityai.ZombieMobBaseEntity;
 import org.bukkit.entity.LivingEntity;
@@ -42,7 +42,7 @@ public class MobsManager {
      * @param mobConfiguration The mob configuration from the file.
      * @return The Mob Machine.
      */
-    public MobMachine buildMiniatureMob(MiniatureMobConfiguration mobConfiguration) {
+    public MobMachine buildMiniatureMob(UCMiniaturesConfiguration mobConfiguration) {
         MobsBase mobsBase = new ZombieMobBaseEntity();
         MobMachine mobMachine = new MobMachine(mobConfiguration.getNameID() + "", mobsBase);
         for (Part part : mobConfiguration.getParts()) {

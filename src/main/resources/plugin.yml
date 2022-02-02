@@ -1,8 +1,8 @@
-name: MiniatureMobs
+name: UCMiniatures
 author: Miyuki_Chan
 version: 1.0
 description: ArmorStand Mobs
 main: net.miyukichan.Main
 commands:
-  miniaturemobs:
-    description: MiniatureMobs
+  UCMiniatures:
+    description: UCMiniatures

@@ -1,12 +1,13 @@
 package net.miyukichan.commands;
 
 import net.miyukichan.Main;
-import net.miyukichan.configuration.MiniatureMobConfiguration;
+import net.miyukichan.configuration.UCMiniaturesConfiguration;
 import net.miyukichan.consts.Constants;
 import net.miyukichan.entityai.ZombieMobBaseEntity;
 import net.miyukichan.mob.MobMachine;
 import net.miyukichan.mob.Part;
 import net.miyukichan.mob.PartType;
+import net.miyukichan.utils.ChatUtils;
 import net.miyukichan.utils.ItemBuilder;
 import net.miyukichan.utils.UMaterial;
 import org.bukkit.Bukkit;
@@ -32,17 +33,17 @@ public final class Commands {
      * @return Boolean value if the mob has spawned
      */
     public static boolean spawnMob(String nameID, int amount, Location spawnLocation, CommandSender commandSender) {
-        MiniatureMobConfiguration mobConfiguration = Main.getInstance().getConfigurationManager().getMobConfigurationByID(nameID);
+        UCMiniaturesConfiguration mobConfiguration = Main.getInstance().getConfigurationManager().getMobConfigurationByID(nameID);
 
         if (mobConfiguration == null) {
-            commandSender.sendMessage(Constants.Command.MOB_CONFIGUCATION_NOT_FOUND.replace("%mob%", nameID));
+            commandSender.sendMessage(ChatUtils.chat(Constants.Command.MOB_CONFIGUCATION_NOT_FOUND.replace("%mob%", nameID)));
             return false;
         }
 
         Player p = (Player) commandSender;
         MobMachine mobMachine = Main.getInstance().getMobsManager().buildMiniatureMob(mobConfiguration);
         mobMachine.spawn(p.getLocation());
-        commandSender.sendMessage(Constants.Command.SPAWN_MOB_SUCCESS.replace("%mob%", nameID));
+        commandSender.sendMessage(ChatUtils.chat(Constants.Command.SPAWN_MOB_SUCCESS.replace("%mob%", nameID)));
 
         return true;
     }
